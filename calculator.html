@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Company - Price Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Your Company</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactus.html">Contact Us</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="calculator.html">Price Calculator</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <h2>Price Calculator</h2>
+        <form id="calculatorForm">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" class="form-control" name="fullName" id="fullName"/>
+                <span id="fullNameError" class="formErrors"></span>
+            </div>
+            <div class="form-group">
+                <label for="serviceType">Service Type</label>
+                <select class="form-control" id="serviceType" name="serviceType">
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="sqft">Square Feet</label>
+                <input type="number" class="form-control" name="sqft" id="sqft" min="1" max="10000"/>
+                <span id="sqftError" class="formErrors"></span>
+
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="urgent" id="urgent"/>
+                <label for="urgent">Urgent</label>
+
+            </div> 
+            <button type="button" class="btn btn-primary" onclick="calculatePrice()">Calculate Price</button>
+        </form>
+        <div id="result" class="mt-4" style="display: none;">
+            <h4>Quote</h4>
+            <p id="quoteResult"></p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <script>
+        calcPageLoad();
+    </script>
+</body>
+
+</html>
