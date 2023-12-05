@@ -1,3 +1,8 @@
 # final_project
+# Name: Reginald Finney
+# ReginaldFinneyFinalProject.zip
 
-git@github.com:rfinney27/final_project.git
+## Implmented bootstrap components:
+1. navbar
+2. container
+3. collapse
